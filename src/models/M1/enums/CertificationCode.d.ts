@@ -1,0 +1,1 @@
+export type CertificationCode = "AEPRO" | "AHWD" | "CBC" | "C-RETS" | "C2EX" | "DMSM" | "DSC" | "EPRO" | "HFR" | "ISA" | "LHC" | "MRP" | "PSA" | "PSC" | "REI" | "RENE" | "RLC" | "RSPS" | "SFR" | "SMC" | "AIC";

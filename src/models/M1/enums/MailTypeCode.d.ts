@@ -1,0 +1,1 @@
+export type MailTypeCode = "O" | "F" | "M" | "H";

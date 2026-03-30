@@ -1,0 +1,1 @@
+export type M1Boolean = "Y" | "N";

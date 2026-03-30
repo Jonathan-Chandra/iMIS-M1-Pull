@@ -1,0 +1,1 @@
+export type MemberStatusCode = "A" | "I" | "T" | "P" | "X" | "S";

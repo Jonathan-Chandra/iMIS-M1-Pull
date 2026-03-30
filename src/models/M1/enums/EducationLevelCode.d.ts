@@ -1,0 +1,1 @@
+export type EducationLevelCode = "SHIGHS" | "HIGHD" | "SCOLL" | "ASC" | "BA" | "SGRAD" | "GRADD" | "PHD";

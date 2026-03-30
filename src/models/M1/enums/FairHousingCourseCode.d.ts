@@ -1,0 +1,1 @@
+export type FairHousingTypeCode = "FHVN" | "BOVR" | "HWD" | "FAIRH";

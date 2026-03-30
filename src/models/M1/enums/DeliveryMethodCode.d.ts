@@ -1,0 +1,1 @@
+export type DeliveryMethodCode = "AUDIO" | "CDROM" | "CLASS" | "ONLINE" | "VIDCON" | "VIDEO";

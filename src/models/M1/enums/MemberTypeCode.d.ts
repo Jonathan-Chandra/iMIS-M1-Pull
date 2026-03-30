@@ -1,0 +1,1 @@
+export type MemberTypeCode = "AFF" | "CCO" | "I" | "L" | "MLO" | "N" | "R" | "RA" | "S";

@@ -1,0 +1,1 @@
+export type DesignationCode = "ABR" | "ABRM" | "ALC" | "ARM" | "CCIM" | "CIPS" | "CPM" | "CRB" | "CRE" | "CRS" | "GAA" | "GREEN" | "GRI" | "PMN" | "RAA" | "RCE" | "SIOR" | "SRES" | "SRS";

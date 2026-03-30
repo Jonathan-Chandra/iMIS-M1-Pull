@@ -1,0 +1,1 @@
+export type EmailTypeCode = "P" | "T" | "B" | "S";

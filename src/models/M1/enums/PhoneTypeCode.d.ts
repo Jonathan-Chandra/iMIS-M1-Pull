@@ -1,0 +1,1 @@
+export type PhoneTypeCode = "O" | "H" | "DD" | "C" | "PF";

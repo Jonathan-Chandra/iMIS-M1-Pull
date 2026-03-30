@@ -1,0 +1,1 @@
+export type MilitaryServiceCode = "VET" | "ACTDTY" | "RESRV" | "RESVSP";

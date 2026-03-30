@@ -1,0 +1,361 @@
+{
+                "$type": "Asi.Soa.Membership.DataContracts.PersonData, Asi.Contracts",
+                "PersonName": {
+                    "$type": "Asi.Soa.Membership.DataContracts.PersonNameData, Asi.Contracts",
+                    "FirstName": "Jonathan",
+                    "InformalName": "Jonathan",
+                    "LastName": "Chandra",
+                    "FullName": "Jonathan Chandra"
+                },
+                "PrimaryOrganization": {
+                    "$type": "Asi.Soa.Membership.DataContracts.PrimaryOrganizationInformationData, Asi.Contracts",
+                    "OrganizationPartyId": "38274",
+                    "Name": "CALIFORNIA ASSOCIATION OF REAL"
+                },
+                "Name": "Jonathan Chandra",
+                "SortIsOverridden": true,
+                "Sort": "chandra, jonathan",
+                "AdditionalAttributes": {
+                    "$type": "Asi.Soa.Core.DataContracts.GenericPropertyDataCollection, Asi.Contracts",
+                    "$values": [
+                        {
+                            "$type": "Asi.Soa.Core.DataContracts.GenericPropertyData, Asi.Contracts",
+                            "Name": "CustomerTypeDescription",
+                            "Value": "Regular Member"
+                        },
+                        {
+                            "$type": "Asi.Soa.Core.DataContracts.GenericPropertyData, Asi.Contracts",
+                            "Name": "IsMemberRecord",
+                            "Value": {
+                                "$type": "System.Boolean",
+                                "$value": true
+                            }
+                        },
+                        {
+                            "$type": "Asi.Soa.Core.DataContracts.GenericPropertyData, Asi.Contracts",
+                            "Name": "CustomerTypeCode",
+                            "Value": "M"
+                        },
+                        {
+                            "$type": "Asi.Soa.Core.DataContracts.GenericPropertyData, Asi.Contracts",
+                            "Name": "IsMember",
+                            "Value": {
+                                "$type": "System.Boolean",
+                                "$value": true
+                            }
+                        },
+                        {
+                            "$type": "Asi.Soa.Core.DataContracts.GenericPropertyData, Asi.Contracts",
+                            "Name": "IsInactiveMember",
+                            "Value": {
+                                "$type": "System.Boolean",
+                                "$value": false
+                            }
+                        },
+                        {
+                            "$type": "Asi.Soa.Core.DataContracts.GenericPropertyData, Asi.Contracts",
+                            "Name": "AllowAdvanceRenewal",
+                            "Value": {
+                                "$type": "System.Boolean",
+                                "$value": false
+                            }
+                        },
+                        {
+                            "$type": "Asi.Soa.Core.DataContracts.GenericPropertyData, Asi.Contracts",
+                            "Name": "JoinDate",
+                            "Value": "2021-01-11T00:00:00"
+                        },
+                        {
+                            "$type": "Asi.Soa.Core.DataContracts.GenericPropertyData, Asi.Contracts",
+                            "Name": "MajorKey",
+                            "Value": "808566042"
+                        },
+                        {
+                            "$type": "Asi.Soa.Core.DataContracts.GenericPropertyData, Asi.Contracts",
+                            "Name": "ParentPartyId",
+                            "Value": "38274"
+                        },
+                        {
+                            "$type": "Asi.Soa.Core.DataContracts.GenericPropertyData, Asi.Contracts",
+                            "Name": "PaidThruDate",
+                            "Value": "0001-01-01T00:00:00"
+                        },
+                        {
+                            "$type": "Asi.Soa.Core.DataContracts.GenericPropertyData, Asi.Contracts",
+                            "Name": "RenewedThruDate",
+                            "Value": "0001-01-01T00:00:00"
+                        }
+                    ]
+                },
+                "Addresses": {
+                    "$type": "Asi.Soa.Membership.DataContracts.FullAddressDataCollection, Asi.Contracts",
+                    "$values": [
+                        {
+                            "$type": "Asi.Soa.Membership.DataContracts.FullAddressData, Asi.Contracts",
+                            "AdditionalLines": {
+                                "$type": "Asi.Soa.Membership.DataContracts.AddressLineDataCollection, Asi.Contracts",
+                                "$values": []
+                            },
+                            "Address": {
+                                "$type": "Asi.Soa.Membership.DataContracts.AddressData, Asi.Contracts",
+                                "AddressId": "92",
+                                "AddressLines": {
+                                    "$type": "Asi.Soa.Membership.DataContracts.AddressLineDataCollection, Asi.Contracts",
+                                    "$values": [
+                                        "4960 Sepulveda Blvd",
+                                        "APT. 202",
+                                        "TEST"
+                                    ]
+                                },
+                                "CityName": "Sherman Oaks",
+                                "CountryCode": "US",
+                                "CountryName": "United States",
+                                "CountrySubEntityCode": "CA",
+                                "CountrySubEntityName": "California",
+                                "CountyName": "Los Angeles",
+                                "FullAddress": "| 4960 Sepulveda Blvd\r| APT. 202\r| TEST\r| Sherman Oaks | CA | 91403-1562\r| UNITED STATES",
+                                "NationalGovernmentDistrict": "32",
+                                "PostalCode": "91403-1562"
+                            },
+                            "AddresseeText": "Jonathan Chandra\r\n| 4960 Sepulveda Blvd\r| APT. 202\r| TEST\r| Sherman Oaks | CA | 91403-1562\r| UNITED STATES",
+                            "AddressPurpose": "Street Address",
+                            "CommunicationPreferences": {
+                                "$type": "Asi.Soa.Membership.DataContracts.CommunicationPreferenceDataCollection, Asi.Contracts",
+                                "$values": [
+                                    {
+                                        "$type": "Asi.Soa.Membership.DataContracts.CommunicationPreferenceData, Asi.Contracts",
+                                        "Reason": "default"
+                                    },
+                                    {
+                                        "$type": "Asi.Soa.Membership.DataContracts.CommunicationPreferenceData, Asi.Contracts",
+                                        "Reason": "bill"
+                                    },
+                                    {
+                                        "$type": "Asi.Soa.Membership.DataContracts.CommunicationPreferenceData, Asi.Contracts",
+                                        "Reason": "ship"
+                                    }
+                                ]
+                            },
+                            "Email": "jonathanc@car.org",
+                            "Fax": "(213) 222-9999",
+                            "FullAddressId": "92",
+                            "Phone": "(213) 222-3333",
+                            "Salutation": {
+                                "$type": "Asi.Soa.Membership.DataContracts.PartySalutationData, Asi.Contracts",
+                                "SalutationMethod": {
+                                    "$type": "Asi.Soa.Membership.DataContracts.PartySalutationMethodSummaryData, Asi.Contracts",
+                                    "PartySalutationMethodId": "main"
+                                },
+                                "Text": "Jonathan Chandra"
+                            },
+                            "DisplayName": "Jonathan",
+                            "DisplayOrganizationName": "CALIFORNIA ASSOCIATION OF REAL"
+                        },
+                        {
+                            "$type": "Asi.Soa.Membership.DataContracts.FullAddressData, Asi.Contracts",
+                            "AdditionalLines": {
+                                "$type": "Asi.Soa.Membership.DataContracts.AddressLineDataCollection, Asi.Contracts",
+                                "$values": []
+                            },
+                            "Address": {
+                                "$type": "Asi.Soa.Membership.DataContracts.AddressData, Asi.Contracts",
+                                "AddressId": "1174336",
+                                "AddressLines": {
+                                    "$type": "Asi.Soa.Membership.DataContracts.AddressLineDataCollection, Asi.Contracts",
+                                    "$values": [
+                                        "17267 Hiawatha St"
+                                    ]
+                                },
+                                "CityName": "Granada Hills",
+                                "CountryCode": "US",
+                                "CountryName": "United States",
+                                "CountrySubEntityCode": "CA",
+                                "CountrySubEntityName": "California",
+                                "CountyName": "Los Angeles",
+                                "DeliveryPointCode": "67",
+                                "FullAddress": "17267 Hiawatha St\rGranada Hills, CA  91344-6124\rUNITED STATES",
+                                "NationalGovernmentDistrict": "32",
+                                "PostalCode": "91344-6124",
+                                "VerifiedOn": "2025-06-12T10:34:13"
+                            },
+                            "AddresseeText": "Jonathan Chandra\r\n17267 Hiawatha St\rGranada Hills, CA  91344-6124\rUNITED STATES",
+                            "AddressPurpose": "Mailing Address",
+                            "CommunicationPreferences": {
+                                "$type": "Asi.Soa.Membership.DataContracts.CommunicationPreferenceDataCollection, Asi.Contracts",
+                                "$values": [
+                                    {
+                                        "$type": "Asi.Soa.Membership.DataContracts.CommunicationPreferenceData, Asi.Contracts",
+                                        "Reason": "mail"
+                                    }
+                                ]
+                            },
+                            "Email": "jonathanc@car.org",
+                            "FullAddressId": "1174336",
+                            "Salutation": {
+                                "$type": "Asi.Soa.Membership.DataContracts.PartySalutationData, Asi.Contracts",
+                                "SalutationMethod": {
+                                    "$type": "Asi.Soa.Membership.DataContracts.PartySalutationMethodSummaryData, Asi.Contracts",
+                                    "PartySalutationMethodId": "main"
+                                },
+                                "Text": "Jonathan Chandra"
+                            },
+                            "DisplayName": "Jonathan",
+                            "DisplayOrganizationName": "CALIFORNIA ASSOCIATION OF REAL"
+                        }
+                    ]
+                },
+                "AlternateIds": {
+                    "$type": "Asi.Soa.Core.DataContracts.AlternateIdDataCollection, Asi.Contracts",
+                    "$values": [
+                        {
+                            "$type": "Asi.Soa.Core.DataContracts.AlternateIdData, Asi.Contracts",
+                            "Id": "808566042",
+                            "IdType": "MajorKey"
+                        },
+                        {
+                            "$type": "Asi.Soa.Core.DataContracts.AlternateIdData, Asi.Contracts",
+                            "Id": "1022",
+                            "IdType": "Id"
+                        }
+                    ]
+                },
+                "Emails": {
+                    "$type": "Asi.Soa.Membership.DataContracts.EmailDataCollection, Asi.Contracts",
+                    "$values": [
+                        {
+                            "$type": "Asi.Soa.Membership.DataContracts.EmailData, Asi.Contracts",
+                            "Address": "jonathanc@car.org",
+                            "EmailType": "_Primary",
+                            "IsPrimary": true
+                        },
+                        {
+                            "$type": "Asi.Soa.Membership.DataContracts.EmailData, Asi.Contracts",
+                            "Address": "jonathanc@car.org",
+                            "EmailType": "Street Address"
+                        },
+                        {
+                            "$type": "Asi.Soa.Membership.DataContracts.EmailData, Asi.Contracts",
+                            "Address": "jonathanc@car.org",
+                            "EmailType": "Mailing Address"
+                        }
+                    ]
+                },
+                "FinancialInformation": {
+                    "$type": "Asi.Soa.Membership.DataContracts.FinancialInformationData, Asi.Contracts"
+                },
+                "Phones": {
+                    "$type": "Asi.Soa.Membership.DataContracts.PhoneDataCollection, Asi.Contracts",
+                    "$values": [
+                        {
+                            "$type": "Asi.Soa.Membership.DataContracts.PhoneData, Asi.Contracts",
+                            "Number": "(213) 222-3333",
+                            "PhoneType": "_Home Phone"
+                        },
+                        {
+                            "$type": "Asi.Soa.Membership.DataContracts.PhoneData, Asi.Contracts",
+                            "Number": "(213) 222-1111",
+                            "PhoneType": "_Work Phone"
+                        },
+                        {
+                            "$type": "Asi.Soa.Membership.DataContracts.PhoneData, Asi.Contracts",
+                            "Number": "(213) 222-9999",
+                            "PhoneType": "_Fax"
+                        },
+                        {
+                            "$type": "Asi.Soa.Membership.DataContracts.PhoneData, Asi.Contracts",
+                            "Number": "(213) 222-3333",
+                            "PhoneType": "Mobile"
+                        },
+                        {
+                            "$type": "Asi.Soa.Membership.DataContracts.PhoneData, Asi.Contracts",
+                            "Number": "(213) 222-3333",
+                            "PhoneType": "Street Address"
+                        },
+                        {
+                            "$type": "Asi.Soa.Membership.DataContracts.PhoneData, Asi.Contracts",
+                            "Number": "(213) 222-9999",
+                            "PhoneType": "Street Address Fax"
+                        }
+                    ]
+                },
+                "Salutations": {
+                    "$type": "Asi.Soa.Membership.DataContracts.PartySalutationDataCollection, Asi.Contracts",
+                    "$values": [
+                        {
+                            "$type": "Asi.Soa.Membership.DataContracts.PartySalutationData, Asi.Contracts",
+                            "IsOverridden": false,
+                            "SalutationId": "1022",
+                            "SalutationMethod": {
+                                "$type": "Asi.Soa.Membership.DataContracts.PartySalutationMethodSummaryData, Asi.Contracts",
+                                "PartySalutationMethodId": "FAMILY"
+                            },
+                            "Text": "Jonathan Chandra"
+                        },
+                        {
+                            "$type": "Asi.Soa.Membership.DataContracts.PartySalutationData, Asi.Contracts",
+                            "IsOverridden": false,
+                            "SalutationId": "1022",
+                            "SalutationMethod": {
+                                "$type": "Asi.Soa.Membership.DataContracts.PartySalutationMethodSummaryData, Asi.Contracts",
+                                "PartySalutationMethodId": "FORMAL"
+                            },
+                            "Text": "Jonathan Chandra"
+                        },
+                        {
+                            "$type": "Asi.Soa.Membership.DataContracts.PartySalutationData, Asi.Contracts",
+                            "IsOverridden": false,
+                            "SalutationId": "1022",
+                            "SalutationMethod": {
+                                "$type": "Asi.Soa.Membership.DataContracts.PartySalutationMethodSummaryData, Asi.Contracts",
+                                "PartySalutationMethodId": "HOUSEHOLD"
+                            },
+                            "Text": "The Chandra Household"
+                        },
+                        {
+                            "$type": "Asi.Soa.Membership.DataContracts.PartySalutationData, Asi.Contracts",
+                            "IsOverridden": false,
+                            "SalutationId": "1022",
+                            "SalutationMethod": {
+                                "$type": "Asi.Soa.Membership.DataContracts.PartySalutationMethodSummaryData, Asi.Contracts",
+                                "PartySalutationMethodId": "INFORMAL"
+                            },
+                            "Text": "Jonathan"
+                        },
+                        {
+                            "$type": "Asi.Soa.Membership.DataContracts.PartySalutationData, Asi.Contracts",
+                            "IsOverridden": false,
+                            "SalutationId": "1022",
+                            "SalutationMethod": {
+                                "$type": "Asi.Soa.Membership.DataContracts.PartySalutationMethodSummaryData, Asi.Contracts",
+                                "PartySalutationMethodId": "LIST_AS"
+                            },
+                            "Text": "Jonathan Chandra"
+                        }
+                    ]
+                },
+                "SocialNetworks": {
+                    "$type": "Asi.Soa.Membership.DataContracts.PartySocialNetworkDataCollection, Asi.Contracts",
+                    "$values": []
+                },
+                "CommunicationTypePreferences": {
+                    "$type": "Asi.Soa.Membership.DataContracts.PartyCommunicationTypePreferenceDataCollection, Asi.Contracts",
+                    "$values": []
+                },
+                "UpdateInformation": {
+                    "$type": "Asi.Soa.Core.DataContracts.EntityUpdateInformationData, Asi.Contracts",
+                    "CreatedBy": "",
+                    "CreatedOn": "2024-01-28T00:00:00",
+                    "UpdatedBy": "JONATHANC@CAR.ORG",
+                    "UpdatedOn": "2026-02-19T10:05:24.07"
+                },
+                "FinancialEntityCode": "CAR",
+                "PartyId": "1022",
+                "Id": "1022",
+                "UniformId": "ad622a02-0f52-4238-b360-7ba31f575351",
+                "Status": {
+                    "$type": "Asi.Soa.Membership.DataContracts.PartyStatusData, Asi.Contracts",
+                    "PartyStatusId": "A",
+                    "Name": "Active",
+                    "Description": "Active"
+                }
+            }
