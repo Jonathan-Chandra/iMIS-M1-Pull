@@ -5,6 +5,7 @@ import type { IQueryResults } from '../models/IMIS/Interfaces/IQueryResults';
 import { queryData } from '../api/IMISClient';
 import type { INrdsIdQueryItem } from '../models/IMIS/INrdsIdQueryItem';
 import { OutputViewer, useLogger } from './OutputViewer';
+//import M1DisplayModal from './M1DisplayModal';
 
 /**
  * M1SyncForm is the primary form component for looking up a record in iMIS by NRDS ID.
@@ -28,6 +29,7 @@ export default function M1SyncForm() {
 
     /** Logger utilities provided by the OutputViewer hook for appending structured log entries. */
     const { logs, log, clear } = useLogger();
+    const [showLogs, setShowLogs] = useState(false);
 
     //const [temp, setTemp] = useState<any>(null);
     //useState<M1SyncFormValues>({ Id: "", RecordType: "Member"});
@@ -50,6 +52,7 @@ export default function M1SyncForm() {
         const result = validateInput(formValues.RecordType, formValues.Id)
         if(result.result === false) {
             log(`Invalid Submission: ${result.message}`, "error");
+            setIdError(result.message);
             return;
         }
         setLoading(true);
@@ -76,8 +79,22 @@ export default function M1SyncForm() {
             <button onClick={handleSubmit}>Pull from M1</button>
             <p>Record Type Value: {formValues.RecordType}</p>
             <p>ID Value: {formValues.Id}</p>
-            <div id="output-viewer">         
-                <OutputViewer logs={logs} />
+             <div>
+            
+            </div>
+            <div id="log-viewer-button" style={{ display: "flex", justifyContent: "flex-end" }}>
+                <button onClick={() => setShowLogs(!showLogs)}>
+                    {showLogs ? "Hide Logs" : "Show Logs"}
+                </button>
+
+            </div>
+            <div id="output-viewer" style={{
+                maxHeight: showLogs ? "300px" : "0px",
+                overflow: "hidden",
+                transition: "max-height 0.3s ease-in-out",
+            }}>
+
+                {showLogs && <OutputViewer logs={logs} />}         
             </div>
             <div id="form-error" className="AsiError row g-3 align-items-center jusify-content-center">
                 {idError}

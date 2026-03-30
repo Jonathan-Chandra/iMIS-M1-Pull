@@ -93,7 +93,6 @@ export function OutputViewer({ logs }: { logs: LogEntry[] }) {
         fontSize: "13px",
         padding: "12px",
         borderRadius: "6px",
-        height: "300px",
         overflowY: "auto",
         whiteSpace: "pre-wrap",
         wordBreak: "break-word",
