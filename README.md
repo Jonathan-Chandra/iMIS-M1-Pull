@@ -50,25 +50,45 @@ fnm default 20
 ```
 src/
   api/
-    client.ts              # Axios instance with auth interceptor
+    IMISClient.ts          # Axios instance with auth interceptor, getParty, queryData
+    M1Client.ts            # Stub — M1 API client (not yet implemented)
   auth/
-    IAuthorization.ts      # Auth service interface
-    AuthorizationService.ts # Factory — returns service based on environment
-    LocalAuthorization.ts  # Dev: username/password → bearer token
-    CloudAuthorization.ts  # Prod: reads token from hidden HTML element
+    IAuthorization.ts      # Auth service interface — getToken(): Promise<string>
+    AuthorizationService.ts # Factory — returns LocalAuthorization or CloudAuthorization
+    LocalAuthorization.ts  # Dev: exchanges username/password for OAuth2 bearer token
+    CloudAuthorization.ts  # Prod/UAT: reads RequestVerificationToken from hidden HTML element
   components/
-    common/                # Reusable UI components
-    graph/                 # React Flow graph components
-    layout/                # Header, sidebar, app layout
-    Example.tsx            # Example component demonstrating API usage
-  hooks/                   # Custom React hooks
-  models/                  # Domain models (mirror backend entities)
-  types/                   # Utility types, API wrappers, UI types
-  pages/                   # Top-level route components
-  utils/                   # Formatters, constants
-  App.tsx
-  main.tsx
-  vite-env.d.ts            # TypeScript declarations for Vite env variables
+    M1SyncForm.tsx         # Primary form — NRDS ID lookup in iMIS
+    OutputViewer.tsx        # Terminal-style log viewer + useLogger hook
+  helpers/
+    FormHelpers.tsx        # validateInput — returns Result with user-facing error message
+    IdValidators.tsx       # validateId — lightweight boolean predicate
+  models/
+    M1SyncFormValues.ts    # M1SyncFormValues, RecordType, Result
+    Token.ts               # IToken — OAuth2 token response shape
+    IMIS/
+      Party.ts             # Party class stub
+      INrdsIdQueryItem.d.ts # IQA query result row for NRDS ID lookups
+      Interfaces/
+        IParty.d.ts        # Top-level iMIS party (person) record
+        IPersonName.ts     # Structured name data
+        IQueryResults.d.ts # Cleaned, de-paginated query result
+        IIQA.d.ts          # Raw paginated IQA response from /Query endpoint
+        Address/           # IAddressData, IFullAddressData, and related collections
+        Communication Preferences/ # ICommunicationPreferenceData and collection
+        Email/             # IEmailData and IEmailDataCollection
+        Finance/           # IFinancialInformationData stub
+        Generics/          # IDataCollection<T>, IGenericPropertyData, and collection
+        Identity/          # IAlternateIdData and IAlternateIdDataCollection
+        Phone/             # IPhoneData and IPhoneDataCollection
+        Salutation/        # IPartySalutationData, collection, and method summary
+    M1/
+      Member.d.ts          # Full M1 member record interface
+      enums/               # M1 string-literal type aliases (status codes, type codes, etc.)
+  App.tsx                  # Default Vite scaffold component (not used — see main.tsx)
+  main.tsx                 # Entry point — mounts M1SyncForm into #root
+vite.config.ts             # Vite config — React plugin, dev proxy, cloud build mode
+vite-build-cloud-extension.ts # Custom plugin — iMIS path rewrite + zip packaging
 ```
 
 ## Environment Configuration
@@ -189,18 +209,30 @@ This proxy only runs during `npm run dev`. In production, the iPart is served fr
 
 ## API Client
 
-The Axios client (`src/api/client.ts`) is pre-configured with:
+The Axios client (`src/api/IMISClient.ts`) is pre-configured with:
 
 - A `baseURL` from `VITE_API_URL`
 - An interceptor that automatically attaches the correct auth header based on the environment
 - `Content-Type: application/json` default header
 
-Import and use it in any component or service:
+Two data-access functions are exported:
+
+- **`getParty(id)`** — fetches a single iMIS party record by internal iMIS ID.
+- **`queryData<T>(queryPath, params)`** — runs an IQA query and auto-paginates through all result pages, returning a cleaned `IQueryResults<T>`.
+
+Import and use them in any component or service:
 
 ```typescript
-import api from '../api/client';
+import { imis_api, getParty, queryData } from '../api/IMISClient';
 
-const response = await api.get('/party');
+// Fetch a party by iMIS ID
+const party = await getParty('12345');
+
+// Run an IQA query
+const results = await queryData<INrdsIdQueryItem>(
+  import.meta.env.VITE_IMIS_PARTY_ID_QUERY,
+  { MajorKey: '123456789' }
+);
 ```
 
 ## Adding API Endpoints

@@ -1,3 +1,8 @@
+/**
+ * M1 codes representing languages spoken by a member, used for matching members
+ * with clients who prefer to work in a specific language. Values are six-character
+ * abbreviations of language names (e.g. `"SPANIS"` = Spanish, `"FRENCH"` = French).
+ */
 export type LanguageCode =
   | "AFRIKA"
   | "ALBAN"
